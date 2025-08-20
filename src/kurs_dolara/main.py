@@ -8,9 +8,11 @@ from textual.containers import Center
 def get_usd_rate():
     url = "https://cbbh.ba/CurrencyExchange/"
     try:
+
         response = requests.get(url, timeout=10)
+        
         response.raise_for_status()  # Raise an exception for bad status codes
-        match = re.search(r'840.*<td class="tbl-smaller tbl-highlight tbl-center middle-column">(\d+\.\d+)<\/td>', response.text, re.DOTALL)
+        match = re.search(r'840.*?<td class="tbl-smaller tbl-highlight tbl-center middle-column">(\d+\.\d+)<\/td>', response.text, re.DOTALL)
         if match:
             return match.group(1)
     except requests.exceptions.RequestException as e:

@@ -62,6 +62,15 @@ Use `pass` command for getting my secrets:
 With `pass pypi/hernad@bring.out.ba/api_token_github` you get pypi api token.
 That token is needed in github actions for publishing project. Setup github actions secret with this.
 
+## General instructions
+
+### .gitignore
+- __pycache__
+- .venv
+
+### github README
+
+- add pypi badge
 
 
 

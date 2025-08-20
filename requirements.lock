@@ -32,11 +32,11 @@ pygments==2.19.2
     # via rich
     # via textual
 requests==2.32.5
-    # via pypi-hello
+    # via kurs-dolara
 rich==14.1.0
     # via textual
 textual==5.3.0
-    # via pypi-hello
+    # via kurs-dolara
 typing-extensions==4.14.1
     # via textual
 uc-micro-py==1.0.3
