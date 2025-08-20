@@ -1,0 +1,32 @@
+[project]
+name = "pypi-hello"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Ernad Husremovic", email = "hernad@bring.out.ba" }
+]
+dependencies = [
+    "textual>=5.3.0",
+    "requests>=2.32.5",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[project.scripts]
+kurs_dolara = "pypi_hello.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.4.1",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pypi_hello"]
