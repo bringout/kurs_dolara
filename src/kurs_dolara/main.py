@@ -1,7 +1,9 @@
+
 import requests
 import re
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Footer, Static
+from textual.containers import Center
 
 def get_usd_rate():
     url = "https://cbbh.ba/CurrencyExchange/"
@@ -18,13 +20,28 @@ def get_usd_rate():
 class KursDolarApp(App):
     """A Textual app to display the USD exchange rate."""
 
-    BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]
+    CSS = """
+    #rate_box {
+        align: center middle;
+        height: 100%;
+    }
+    #rate {
+        background: green;
+        padding: 1 2;
+    }
+    """
+
+    BINDINGS = [
+        ("d", "toggle_dark", "Toggle dark mode"),
+        ("enter", "exit_app", "Exit"),
+    ]
 
     def compose(self) -> ComposeResult:
         """Create child widgets for the app."""
         yield Header()
         yield Footer()
-        yield Static("Fetching USD rate...", id="rate")
+        with Center(id="rate_box"):
+            yield Static("Fetching USD rate...", id="rate")
 
     def on_mount(self) -> None:
         """Called when the app is mounted."""
@@ -34,6 +51,10 @@ class KursDolarApp(App):
     def action_toggle_dark(self) -> None:
         """An action to toggle dark mode."""
         self.dark = not self.dark
+
+    def action_exit_app(self) -> None:
+        """An action to exit the app."""
+        self.exit()
 
 def main():
     app = KursDolarApp()
