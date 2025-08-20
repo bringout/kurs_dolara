@@ -1,5 +1,5 @@
 [project]
-name = "pypi-hello"
+name = "kurs-dolara"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
@@ -13,7 +13,7 @@ readme = "README.md"
 requires-python = ">= 3.12"
 
 [project.scripts]
-kurs_dolara = "pypi_hello.main:main"
+kurs_dolara = "kurs_dolara.main:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -29,4 +29,4 @@ dev-dependencies = [
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/pypi_hello"]
+packages = ["src/kurs_dolara"]

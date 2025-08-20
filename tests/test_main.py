@@ -1,7 +1,7 @@
 
 import pytest
 from unittest.mock import patch
-from pypi_hello.main import get_usd_rate
+from kurs_dolara.main import get_usd_rate
 
 @patch('requests.get')
 def test_get_usd_rate(mock_get):
