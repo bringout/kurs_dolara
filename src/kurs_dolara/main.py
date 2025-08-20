@@ -1,4 +1,3 @@
-
 import requests
 import re
 from textual.app import App, ComposeResult
@@ -22,8 +21,9 @@ class KursDolarApp(App):
 
     CSS = """
     #rate_box {
-        align: center middle;
+        align: center bottom;
         height: 100%;
+        padding: 0 0 1 0;
     }
     #rate {
         background: green;
@@ -32,8 +32,7 @@ class KursDolarApp(App):
     """
 
     BINDINGS = [
-        ("d", "toggle_dark", "Toggle dark mode"),
-        ("enter", "exit_app", "Exit"),
+        ("enter", "exit_app", "Izlaz"),
     ]
 
     def compose(self) -> ComposeResult:
@@ -47,10 +46,6 @@ class KursDolarApp(App):
         """Called when the app is mounted."""
         rate = get_usd_rate()
         self.query_one("#rate", Static).update(f"Današnji kurs USD je {rate} KM.")
-
-    def action_toggle_dark(self) -> None:
-        """An action to toggle dark mode."""
-        self.dark = not self.dark
 
     def action_exit_app(self) -> None:
         """An action to exit the app."""
