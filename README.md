@@ -1,9 +1,12 @@
-
 # kurs_dolara
 
 [![PyPI version](https://badge.fury.io/py/kurs-dolara.svg)](https://badge.fury.io/py/kurs-dolara)
 
 A simple TUI application to check the current USD exchange rate from the Central Bank of Bosnia and Herzegovina.
+
+## Screenshot
+
+![Application Screenshot](app_screenshot.png)
 
 ## Installation
 
