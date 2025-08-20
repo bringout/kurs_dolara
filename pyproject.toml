@@ -1,7 +1,7 @@
 [project]
 name = "kurs-dolara"
-version = "1.0.0"
-description = "Add your description here"
+version = "1.0.1"
+description = "Pokupi trenutni kurs dolara sa https://cbbh.ba/CurrencyExchange/"
 authors = [
     { name = "Ernad Husremovic", email = "hernad@bring.out.ba" }
 ]
@@ -14,6 +14,9 @@ requires-python = ">= 3.12"
 
 [project.scripts]
 kurs_dolara = "kurs_dolara.main:main"
+
+[project.urls]
+github = "https://github.com/bringout/kurs_dolara
 
 [build-system]
 requires = ["hatchling"]
