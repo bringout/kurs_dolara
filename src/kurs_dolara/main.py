@@ -1,3 +1,4 @@
+
 import requests
 import re
 from textual.app import App, ComposeResult
@@ -21,13 +22,13 @@ class KursDolarApp(App):
 
     CSS = """
     #rate_box {
-        align: center bottom;
+        align: center middle;
         height: 100%;
-        padding: 0 0 1 0;
     }
     #rate {
         background: green;
         padding: 1 2;
+        text-align: center;
     }
     """
 
