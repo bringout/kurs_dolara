@@ -1,7 +1,7 @@
 [project]
 name = "kurs-dolara"
-version = "1.2.0"
-description = "Pokupi trenutni kurs dolara sa https://cbbh.ba/CurrencyExchange/"
+version = "1.2.1"
+description = "Program koji prikazuje trenutni kurs dolara prema podacima sa web sajta Centralne banke BiH"
 authors = [
     { name = "Ernad Husremovic", email = "hernad@bring.out.ba" }
 ]

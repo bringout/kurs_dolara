@@ -7,7 +7,7 @@ Learn and setup python publish workflow on pypi
 
 ## Program features
 
-Create python TUI application which will get current rate of USD from Centralna BiH.
+Program koji prikazuje trenutni kurs dolara prema podacima sa web sajta Centralne banke BiH
 Current rate is published on page https://cbbh.ba/CurrencyExchange/
 
 I have checked reading that url with curl and have got this result:
