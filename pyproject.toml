@@ -1,6 +1,6 @@
 [project]
 name = "kurs-dolara"
-version = "1.1.1"
+version = "1.2.0"
 description = "Pokupi trenutni kurs dolara sa https://cbbh.ba/CurrencyExchange/"
 authors = [
     { name = "Ernad Husremovic", email = "hernad@bring.out.ba" }
