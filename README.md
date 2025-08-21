@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/kurs-dolara)](https://pypi.org/project/kurs-dolara/)
 
-A simple TUI application to check the current USD exchange rate from the Central Bank of Bosnia and Herzegovina.
+A simple CLI/TUI application to check the current USD exchange rate from the Central Bank of Bosnia and Herzegovina.
 
 ## Screenshot
 

@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a simple Python Textual TUI application called `kurs-dolara`. Its purpose is to fetch and display the current USD exchange rate from the Central Bank of Bosnia and Herzegovina. The application uses the `requests` library to fetch the data and `textual` to build the TUI.
+This project is a simple Python Textual CLI/TUI application called `kurs-dolara`. Its purpose is to fetch and display the current USD exchange rate from the Central Bank of Bosnia and Herzegovina. The application uses the `requests` library to fetch the data and `textual` to build the TUI.
 
 ## Building and Running
 
