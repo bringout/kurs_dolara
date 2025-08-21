@@ -67,7 +67,13 @@ def main():
         action='version',
         version=f'%(prog)s {importlib.metadata.version("kurs-dolara")}',
     )
+    parser.add_argument('--cli', action='store_true', help='Display the rate in the console and exit.')
     args = parser.parse_args()
+
+    if args.cli:
+        rate = get_usd_rate()
+        print(f"Današnji kurs USD je {rate} KM.")
+        return
 
     theme = 'textual-light' if args.light else 'textual-dark'
     app = KursDolarApp(theme=theme)

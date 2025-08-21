@@ -26,6 +26,7 @@ kurs_dolara
 
 *   `--light`: Use a light theme for the application.
 *   `--version`: Show the version of the application.
+*   `--cli`: Display the rate in the console and exit.
 
 ## Development
 
