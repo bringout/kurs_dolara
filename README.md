@@ -28,6 +28,12 @@ kurs_dolara
 *   `--version`: Show the version of the application.
 *   `--cli`: Display the rate in the console and exit.
 
+### Examples
+
+```
+kurs_dolara --cli | awk '{ print $5 }' # => 1.678680
+```
+
 ## Development
 
 This project uses `rye` for project management.
