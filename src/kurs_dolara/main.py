@@ -1,4 +1,4 @@
-
+import argparse
 import requests
 import re
 from textual.app import App, ComposeResult
@@ -21,6 +21,10 @@ def get_usd_rate():
 
 class KursDolarApp(App):
     """A Textual app to display the USD exchange rate."""
+
+    def __init__(self, theme='textual-dark', **kwargs):
+        super().__init__(**kwargs)
+        self.theme = theme
 
     CSS = """
     #rate_box {
@@ -55,7 +59,12 @@ class KursDolarApp(App):
         self.exit()
 
 def main():
-    app = KursDolarApp()
+    parser = argparse.ArgumentParser(description='Display USD exchange rate.')
+    parser.add_argument('--light', action='store_true', help='Enable light theme.')
+    args = parser.parse_args()
+
+    theme = 'textual-light' if args.light else 'textual-dark'
+    app = KursDolarApp(theme=theme)
     app.run()
 
 if __name__ == "__main__":
