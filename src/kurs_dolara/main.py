@@ -1,6 +1,7 @@
 import argparse
 import requests
 import re
+import importlib.metadata
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Footer, Static
 from textual.containers import Center
@@ -61,6 +62,11 @@ class KursDolarApp(App):
 def main():
     parser = argparse.ArgumentParser(description='Display USD exchange rate.')
     parser.add_argument('--light', action='store_true', help='Enable light theme.')
+    parser.add_argument(
+        '--version',
+        action='version',
+        version=f'%(prog)s {importlib.metadata.version("kurs-dolara")}',
+    )
     args = parser.parse_args()
 
     theme = 'textual-light' if args.light else 'textual-dark'

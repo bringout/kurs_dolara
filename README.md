@@ -16,9 +16,16 @@ pip install kurs_dolara
 
 ## Usage
 
+To run the application, simply type:
+
 ```bash
 kurs_dolara
 ```
+
+### Options
+
+*   `--light`: Use a light theme for the application.
+*   `--version`: Show the version of the application.
 
 ## Development
 
